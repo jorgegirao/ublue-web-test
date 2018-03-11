@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>UNITECBLUE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+        
+        <script src="js/init.js" type="text/javascript"></script>
+        <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+        
+        
+        <script type="text/javascript">
+		$(document).ready(function(){
+	        $(function(){   
+		        $("a.home").click(function(){
+    			if($("#bgimg").css("display")=="none"){
+					$("#imgbackareas").fadeIn(2000);
+				}else{
+					$("#imgbackareas").fadeOut(1000);
+				}
+	 		});
+		   
+		   $('.navBtn').click(function(){
+				
+				btnnav = $(this).attr("id");
+	
+				if(btnnav=='navProductos'){
+					$("#imgbackareas").css("background-image","url(img/prodsBg.jpg)");
+					$("#imgbackareas").fadeToggle(2000);
+				}if(btnnav=='navSoluciones'){
+					$("#imgbackareas").css("background-image","url(img/soluBg.jpg)");
+					$("#imgbackareas").fadeToggle(2000);
+			    }if(btnnav=='navPlanta'){
+					$("#imgbackareas").css("background-image","url(img/plantaBg.jpg)");
+					$("#imgbackareas").fadeToggle(2000);
+			    }if(btnnav=='navUnitecblue'){
+					$("#imgbackareas").css("background-image","url(img/ublueBg.jpg)");
+					$("#imgbackareas").fadeToggle(2000);
+				}if(btnnav=='navQuienes'){
+					$("#imgbackareas").css("background-image","url(img/ublueBg.jpg)");
+					$("#imgbackareas").fadeToggle(2000);
+				}
+	 		});
+		   });
+	    });
+		   
+	</script>
+        
+    </head>
+    <body>
+    <div class="wrapper">
+	    <div class="bgimg"></div>
+	    <div id="imgbackareas" class="imgbackareas"></div>
+	    
+	        <canvas id="canvas">Canvas not available</canvas>
+	        <div class="menuTop">
+	            <div class="menu">
+	                <a id="home" class="home">HOME</a>
+	            </div>
+	            <div class="menu">
+	                <a id="#" class="prensaimagen">PRENSA & IMAGEN</a>
+	            </div>
+	            <div>
+	                <a href="mailto:info@unitecblue.com">CONTACTO</a>
+	            </div>
+	            <div style="clear:both"></div>
+	        </div>
+	        <div class="container" id="container">
+	            <div id="area1" class="area">
+	           
+		            <div class="navBtn" id="prodServicios">SERVICIOS</div>
+	                <div class="navBtn" id="prodProductos">PRODUCTOS</div>
+	                <div class="serviciosListHead" id="serviciosListHead">SERVICIOS</div>
+	                <div class="list serviciosList">
+	                    <ul>
+	                        <li>PERSONALIZACI&Oacute;N GR&Aacute;FICA DE TARJETAS CON DATOS VARIABLES:</li>
+	                        <li>FULL COLOR TEXTO Y FOTO INTEGRADOS AL ARTE GR&Aacute;FICO IMPRESO BAJO LAMINADO.</li>
+	                        <li>IMPRESI&Oacute;N L&Aacute;SER TEXTO Y FOTO EN ESCALA DE GRISES DE ALTA DEFINICI&Oacute;N 
+	                            <ul><li>(ENGRAVING), C&Oacute;DIGO DE BARRAS INDELEBLE.</li></ul>
+	                        </li>
+	                        <li>EMBOZADO RELIEVE Y BAJO RELIEVE (TIPPING).</li>
+	                        <li>GRABACI&Oacute;N DE BANDA MAGN&Eacute;TICA.</li>
+	                        <li>GRABACI&Oacute;N DE DATOS EN EL CHIP:
+	                        	<ul>
+		                            <li>INYECCI&Oacute;N DE CLAVES, MAPPING, FORMATEO CON PERFIL EL&Eacute;CTRICO.</li>
+		                            <li>DESARROLLO DE APLICATIVOS.</li>
+	                        	</ul>
+	                        </li>
+	                        <li>HOLOGRAMAS CUSTOMIZADOS:
+	                        	<ul>
+		                            <li>TINTAS ESPECIALES Y DE SEGURIDAD.</li>
+		                            <li>IMPRESIONES CON GUILLOCHE Y MICROESCRITURA.</li>
+		                            <li>PANEL DE FIRMAS PERSONALIZADO.</li>
+	                        	</ul>
+	                        </li>
+	                        <li>IMPRESI&Oacute;N DE CARD CARRIERS Y PORTATARJETAS.</li>
+	                        <li>INSERTS, ENSOBRADO Y FINISHING POSTAL.</li>
+	                        <li>DISTRIBUCI&Oacute;N.</li>
+	                    </ul>
+	                </div>
+	                <div class="list productosList">
+	                    <div class="productosColumn1">
+	                        <div class="transporteListHead" id="transporteListHead">TRANSPORTE</div>
+	                        <ul class="transporteList">
+	                            <li>TARJETAS DE PROXIMIDAD</li>
+	                            <li>PAPER TICKETS</li>
+	                            <li>PRELAMINADOS</li>
+	                        </ul>
+	                        <div class="financierosListHead">SERVICIOS FINANCIEROS</div>
+		                    <ul class="financierosList">
+	                      <li>TARJETAS BANDA MAGN&Eacute;TICA</li>
+		                        <li>TARJETAS EMV</li>
+		                        <li>TARJETAS DISPLAY</li>
+		                        <li>M&Oacute;DULOS IC STRAP</li>
+		                    </ul>
+		                    <div class="epcListHead">EPC Y TRAZABILIDAD</div>
+			                <ul class="epcList">
+	                      <li>TARJETAS INTELIGENTES</li>
+			                    <li>ETIQUETAS INTELIGENTES</li>
+			                    <li>DRY INLAYS</li>
+			                    <li>WET INLAYS</li>
+			                    <li>TAGS</li>
+			                </ul>
+		                </div>
+				        <div class="productosColumn2">
+					        <div class="telecomListHead">TELECOMUNICACIONES</div>
+			                <ul class="telecomList">
+			                    <li>TARJETAS SIM</li>
+			                    <li>M&Oacute;DULOS IC STRAP</li>
+			                </ul>
+			                 <div class="gobiernoListHead">GOBIERNO ELECTR&Oacute;NICO</div>
+			                <ul class="gobiernoList">
+	                      <li>TARJETAS DE IDENTIFICACI&Oacute;N</li>
+			                    <li>DOCUMENTOS DE IDENTIFICACI&Oacute;N</li>
+			                    <li>PRELAMINADOS</li>
+			                    <li>PASAPORTE ELECTR&Oacute;NICO</li>
+			                    <li>DUAL-INTERFACE</li>
+			                </ul>
+				        </div>
+				        <div style="clear:both;"></div>
+	                    
+				    </div>
+	                
+	            </div>
+	            
+	            
+	        <div id="area2" class="area">
+		        <div class="navBtn" id="pressPrensa">PRENSA</div>
+	            <div class="navBtn" id="pressImagen">IMAGEN</div>
+	            <div class="list prensaList">
+	                <div class="prensaRevistaListHead" id="prensaRevistaListHead">REVISTA</div>
+	                <ul class="revistaList">
+	                    <li>01</li>
+	                    <li>2</li>
+	                    <li>3</li>
+	                    <li>4</li>
+	                </ul>
+	                <div class="prensaWebListHead">WEB</div>
+	                <ul class="webList">
+	                    <li>01</li>
+	                    <li>2</li>
+	                    <li>3</li>
+	                    <li>4</li>
+	                </ul>
+	            </div>
+	            <div class="list imagenList">
+	            <div class="imagenListHead" id="imagenListHead">IMAGEN</div>
+	                <ul>
+	                    <li>01</li>
+	                    <li>2</li>
+	                    <li>3</li>
+	                    <li>4</li>
+	                </ul>
+	            </div>
+	        </div>
+	        <div id="area3" class="area"><span>.3</span></div>
+	        <div id="area4" class="area">
+	            <div class="logoHome">
+	                <img src="img/logo_home_500.png" alt="Unitec Blue" width="500" height="85" />
+	                <br/>
+	                <div class="bold">EMPRESA ARGENTINA DE PRODUCCI&Oacute;N DE TECNOLOG&Iacute;A</div>DE ULTIMA GENERACION</div>
+	                <div class="menu">
+			            <a id="#area1"><div class="navBtn" id="navProductos">PRODUCTOS</div></a>
+			            <a id="#area5"><div class="navBtn" id="navSoluciones">SOLUCIONES</div></a>
+			            <a id="#area8"><div class="navBtn" id="navPlanta">PLANTA</div></a>
+			            <a id="#area7"><div class="navBtn" id="navUnitecblue">UNITECBLUE</div></a>
+			            <a id="#area7"><div class="navBtn" id="navQuienes">QUIENES SOMOS</div></a>
+			            <a id="#area1"><div class="navBtn" id="navOculto">.</div></a>                        
+		            </div>
+		            <div class="homeinfo"><div class="homeinfoimg"><img src="img/homeicon.png" alt="UnitecBlue" height="95%" /></div>CONSTITUYE UNA PLATAFORMA DE POTENCIACI&Oacute;N DE LAS CAPACIDADES TECNOL&Oacute;GICAS DEL PA&Iacute;S Y SE POSICIONA COMO UN GENERADOR DE MERCADOS PARA LA CIENCIA Y LA T&Eacute;CNICA CON FUERTE INCIDENCIA REGIONAL E INTERNACIONAL.</div>
+	        </div>
+	        <div id="area5" class="area">
+	        	<div class="navBtn" id="soluSoluciones">SOLUCIONES</div>
+	            <div class="navBtn" id="soluRfid">SOLUCIONES RFID</div>
+	            <div class="navBtn" id="soluAplicaciones">APLICACIONES RFID</div>
+	            <div class="listHead soluRfidListHead" id="soluRfidListHead">RFID</div>
+	            <div class="list soluRfidList">
+	                <div class="soluSubHeadBlanco">LA IDENTIFICACI&Oacute;N POR RADIOFRECUENCIA -RFID- ES EL SISTEMA M&Aacute;S AVANZADO PARA LA IDENTIFICACI&Oacute;N DE OBJETOS A DISTANCIA SIN NECESIDAD DE CONTACTO NI VISUALIZACI&Oacute;N. SE REQUIERE UNA ETIQUETA O TAG RFID QUE CONSISTE EN UN MICROCHIP QUE VA ADJUNTO A UNA ANTENA DE RADIO Y SIRVE PARA IDENTIFICAR UN&Iacute;VOCAMENTE AL ELEMENTO PORTADOR DE LA ETIQUETA. PARA INTERROGAR O IDENTIFICAR ESTE TAG Y OBTENER SU C&Oacute;DIGO, SE UTILIZA UN LECTOR RFID CAPAZ DE RECONOCERLO Y ENTREGAR EL DATO PARA SU PROCESAMIENTO.</div>
+	                <p>
+	NO REQUIERE L&Iacute;NEA DE VISI&Oacute;N DEL TAG O ETIQUETA PARA OBTENER SU C&Oacute;DIGO. ES POSIBLE LA LECTURA A TRAV&Eacute;S DE OBJETOS.
+	LA LECTURA NO REQUIERE INTERVENCI&Oacute;N HUMANA. ES AUTOM&Aacute;TICA
+	PERMITE LA LECTURA A DISTANCIA, Y LA MISMA DEPENDER&Aacute; DE LA ANTENA DE LA ETIQUETA O TAG Y DEL RANGO DE FRECUENCIA DEL LECTOR (FRECUENCIA BAJA -LF-; FRECUENCIA ALTA -HF-; Y FRECUENCIA ULTRA ALTA -UHF-)
+	PERMITE LA LECTURA M&Uacute;LTIPLE Y SIMULT&Aacute;NEA DE VARIAS ETIQUETAS POR SEGUNDO
+	TIENE &Oacute;PTIMA DURABILIDAD
+	PERMITE LA LECTO-ESCRITURA DE DATOS, CON CAPACIDAD DE DETERMINAR SECTORES DE SOLO LECTURA, SOLO ESCRITURA O AMBAS ACCIONES, CON ALTAS MEDIDAS DE SEGURIDAD.
+	PERMITE GRAN VOLUMEN DE ALMACENAMIENTO DE DATOS POR LO CUAL ES M&Aacute;S EFICAZ QUE LOS SISTEMAS DE IDENTIFICACI&Oacute;N &Oacute;PTICOS
+	APORTA ALTO NIVEL DE SEGURIDAD. SE ALMACENA INFORMACI&Oacute;N CIFRADA Y SE PUEDE CONFIGURAR LA PROTECCI&Oacute;N DE DATOS POR CONTRASE&Ntilde;A PARA LOS CASOS DE LECTO-ESCRITURA; Y LA ENCRIPTACI&Oacute;N PARA LA TRANSFERENCIA DE DATOS.
+	                </p>
+	            </div>
+	            <div class="list soluAplicacionesList">
+	            <div class="soluAplicacionesListHead" id="soluAplicacionesListHead"></div>
+	                <p>LAS TECNOLOG&Iacute;AS RFID SE UTILIZAN ACTUALMENTE EN NUMEROSAS APLICACIONES, PRINCIPALMENTE PARA LA IDENTIFICACI&Oacute;N SEGURA DE PRODUCTOS Y PARA LA OPTIMIZACI&Oacute;N DE LOS SISTEMAS DE LOG&Iacute;STICA.
+	ALGUNOS EJEMPLOS:</p>
+					<ul>
+						<li>TRAZABILIDAD DE MEDICAMENTOS</li>
+						<li>TRAZABILIDAD ANIMAL</li>
+						<li>TRANSPORTE DE MERCADER&Iacute;A</li>
+						<li>CONTROL DE ACCESO Y PERMANENCIA DE PERSONAS</li>
+						<li>CONTROL HOSPITALARIO</li>
+						<li>INDUMENTARIA</li>
+						<li>RETAIL</li>
+						<li>GESTI&Oacute;N DE ARCHIVO</li>
+					</ul>
+	            </div>
+	        </div>
+	        <div id="area6" class="area"><span>.6</span>
+	        </div>
+	        <div id="area7" class="area">
+	        	<div class="navBtn" id="ublueUblue">UNITECBLUE</div>
+	            <div class="navBtn" id="ublueFase1">FASE I</div>
+	            <div class="navBtn" id="ublueFase2">FASE II</div>
+	            <div class="listHead backendListHead" id="backendListHead">PLANTA BACK END</div>
+	            <div class="list backendList">
+		            <div class="ublueSubHeadBlanco">FABRICACION DE CHIPS DESDE LA OBLEA ORIGINAL <br/>HASTA SU INSERCI&Oacute;N EN UN EQUIPO ELECTR&Oacute;NICO</div>
+		            <ul>
+		                <li>SEPARACI&Oacute;N CHIP DE OBLEAS DE SILICIO</li>
+		                <li>TESTEOS DE DESEMPEÑO</li>
+		                <li>INSERCI&Oacute;N EN UN SOPORTE EL&Eacute;CTRICO Y MEC&Aacute;NICO</li>
+		                <li>TARJETAS INTELIGENTES</li>
+	                    <li>TAGS RFID</li>
+		            </ul>
+		        </div>
+		        <div class="listHead fabricacionListHead" id="fabricacionListHead">FABRICACI&Oacute;N DISPOSITIVOS MICRO Y NANO TECNOLOG&Iacute;A</div>
+		        <div class="list fabricacionList">
+		           <div class="ublueSubHeadBlanco"> PROCESOS INVOLUCRADOS DE PREPARACI&Oacute;N Y TRANSFORMACI&Oacute;N DE OBLEAS EN CIRCUITOS INTEGRADOS</div>
+		            <p>A partir de obleas de silicio, se desarrollar&aacute;n todos los procesos involucrados en la preparaci&oacute;n y transformaci&oacute;n de esas obleas en circuitos integrados. Con t&eacute;cnicas y equipamiento de la m&aacute;s avanzada tecnolog&iacute;a se realizar&aacute;n los procesos de litograf&iacute;a, grabado, implantaci&oacute;n de iones y oxidaci&oacute;n. Esta etapa incluir&aacute; la medici&oacute;n, testing y preparaci&oacute;n final para su incorporaci&oacute;n en dispositivos a los que dotar&aacute;n de la funcionalidad prevista. Con la electr&oacute;nica impresa se generar&aacute;n productos m&aacute;s delgados y flexibles, amigables con el medio ambiente, y ahorrando costos tanto en los procesos de producci&oacute;n como en el producto final. En esta etapa se producir&aacute;n, entre otros productos:</p>
+		            <ul>
+		                <li>PANTALLAS SOLARES FLEXIBLES</li>
+		                <li>ILUMINACI&Oacute;N LED</li>
+		                <li>LENTES INTELIGENTES</li>
+		                <li>ENVASES INTELIGENTES</li>
+		                <li>DISPOSITIVOS DE MEMORIAS</li>
+		                <li>SENSORES (HUMEDAD, GASES, TEMPERATURA, ETC.)</li>
+		                <li>BATER&Iacute;AS IMPRESAS</li>
+		            </ul>
+		        </div>
+	        </div>
+	        <div id="area8" class="area">
+	      <div class="navBtn" id="plantaPlanta">PLANTA</div>
+	            <div class="listHead plantaListHead" id="plantaListHead">PLANTA DE PRODUCCI&Oacute;N</div>
+	            <div class="list plantaList">
+	                <p>UNITEC BLUE POSEE UNA PLANTA EN LA LOCALIDAD DE CHASCOMÚS, A 120 KM DE LA CIUDAD DE BUENOS AIRES QUE COMPRENDE UN &Aacute;REA TOTAL DE 9 HECT&Aacute;REAS, DE LAS CUALES 500 METROS CUADRADOS CORRESPONDEN A LA SALA LIMPIA, DONDE UN SISTEMA DE FILTRADO DE AIRE LA MANTIENE CON MENOS DE 10.000 PART&Iacute;CULAS DE POLVO POR METRO CÚBICO.<br/>
+	
+	M&Aacute;S DE 100 EQUIPOS DE ALTA COMPLEJIDAD TECNOL&Oacute;GICA DE LAS MARCAS L&Iacute;DERES A NIVEL INTERNACIONAL –M&Uuml;LHBAUER, KBA METRONICS, K&Oacute;NICA MINOLTA, HP INDIGO Y LAUFFER-<br/>
+	
+	PERSONAL ALTAMENTE PROFESIONALIZADO<br/>
+	
+	INSTALACIONES F&Iacute;SICAS Y PROTOCOLOS DE SEGURIDAD REQUERIDOS A NIVEL INTERNACIONAL PARA FABRICAR PRODUCTOS BANCARIOS Y DE IDENTIFICACI&Oacute;N GUBERNAMENTAL.<br/>
+	
+	PROCESO PRODUCTIVO DE CICLO COMPLETO, DESDE LA OBLEA DE SILICIO HASTA EL PRODUCTO TERMINADO, QUE CUMPLE LOS M&Aacute;S EXIGENTES EST&Aacute;NDARES DE CALIDAD.<br/>
+	
+	CAPACIDAD INSTALADA Y AGILIDAD QUE NOS PERMITE VELOCIDAD DE RESPUESTA AUN FRENTE A R&Aacute;PIDOS CAMBIOS EN LA DEMANDA Y CONFIABILIDAD EN LA ENTREGA</p>
+	            </div>
+	            
+	            <div class="graficoList">
+	            <div class="graficoimg">
+	            	<img src="img/grafico.png" width="480" height="226" alt="Planta Unitec Blue">
+	            </div>
+	            <div class="graficotxt">
+	                <img src="img/graficotxt.png" alt="Planta Unitec Blue">
+	            </div>
+	          </div>
+	        </div>
+	        <div id="area9" class="area"><span>.9</span>
+	        </div>
+	        </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var offset = $("#area4", this).offset().top;
+                $(".wrapper").animate({
+                    scrollTop: offset
+                }, 100, function(){
+				    $("body").animate({opacity: 1}, 1000);
+				});
+            });
+        </script>
+    </body>
+</html>

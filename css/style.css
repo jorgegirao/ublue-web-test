@@ -1,0 +1,876 @@
+/* #canvas{display:none; */
+
+html,body{
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+}
+.wrapper{
+	position: relative;
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	overflow: hidden;
+	font-weight: 200;
+	font-family: Raleway;
+	opacity: 0;
+}
+.bgimg{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:8;
+	background: white url("../img/homeBg.jpg") no-repeat 0 0;
+	background-position: 100% auto;
+	background-size:cover;	
+	
+}
+
+.imgbackareas { 
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:8;
+	display:none;
+	width:100%;
+	height:100%;
+	background-image:url("../img/prodsBg.jpg");
+	background-position: 100% auto;
+	background-size:cover;}
+
+
+.container{
+	position: relative;
+	min-width:1200px;
+	/* min-height:3000px; */
+	width:200%;
+	height:200%;
+	/* background: -webkit-linear-gradient(#8e4545 0%, #f4ee6b 100%); */
+	background:white;
+}
+
+.container .area{
+	position: absolute;
+	width:48%;
+	height:48%;
+	border:none;
+}
+.container .area span{
+	position: absolute;
+	top:35%;
+	left:43%;
+	color:#888;
+	text-decoration: none;
+	font-size: 12em;
+}
+
+/* .container .area span:hover{
+	color:#333; */
+
+/* cursor: pointer; */
+
+#area2{
+	top:10px;
+}
+#area3{
+	top:10px;
+}
+#area4{
+	left:10px;
+}
+#area5{
+}
+#area6{
+}
+#area7{
+	left:10px;
+}
+#area8{
+}
+#area9{
+}
+
+/* ============================================================ menu top ================= */
+
+.menuTop{
+	position: fixed;
+	top:20px;
+	right: 20px;
+	z-index: 999;
+	width: 300px;
+	height:40px;
+}
+
+.menuTop a{
+	display:block;
+	float:left;
+	margin: 3px;
+	padding:0 0 0 5px;
+	width:80px;
+	height: 35px;
+	border-radius: 5px;
+	background:#009DDC;
+	background: rgba(0, 157, 220, 0.9);
+	box-shadow:5px 5px 14px rgba(0,0,0,0.4);
+	color: white;
+	text-decoration: none;
+	font-size: 0.7em;
+	line-height: 35px;
+}
+
+.menuTop a:hover{
+	background:#009DDC;
+	background: rgba(0, 157, 220,1);
+}
+
+.menuTop .prensaimagen{
+	padding: 7px 0 0 5px;
+	height: 28px;
+	line-height: 1em;
+}
+
+/* ============================================================ home ================= */
+
+.logoHome{
+	position:absolute;
+	top:35%;
+	left:5%;
+	z-index:10;
+	color:#009DDC;
+}
+
+.logoHome .bold{
+	word-spacing: 0.1em;
+	letter-spacing: 0.1em;
+	font-weight: 800;
+}
+
+
+.menu{
+	z-index: 10;
+	width: auto;
+	height:auto;
+	background: none;
+}
+
+.menu a{
+	display: block;
+}
+.menu a:hover{
+	cursor: pointer;
+	}
+	
+
+.navBtn{
+	position: absolute;
+	z-index:10;
+	padding:20px 0 0 10px;
+	width:130px;
+	height:40px;
+	border-radius: 5px;
+	background:#009DDC;
+	background: rgba(0, 157, 220,0.9);
+	box-shadow:5px 5px 14px rgba(0,0,0,0.4);
+	color:white;
+}
+
+#navProductos{top:120px;right:480px;}
+#navSoluciones{top:160px;right:180px;}
+#navPlanta{top:390px;right:60px;}
+#navUnitecblue{top:540px;right:300px;}
+#navQuienes{top:480px;right:600px;padding:10px 0 0 10px;height:50px;}
+#navOculto{top:340px;right:520px;visibility: hidden;padding: 0;width: 40px;height:40px;}
+
+
+/* ============================================================ canvas ================= */
+#canvas {
+	margin:0;
+	padding: 0;
+	background-color:none;}
+/* ============================================================ gral - listas ================= */
+
+.list{
+	z-index:10;
+	padding-top: 1em;
+	background: #02b9e3;
+	background: -webkit-linear-gradient(left,  #02b9e3 1%,#0079c2 100%);
+	background: -ms-linear-gradient(left,  #02b9e3 1%,#0078c2 100%);
+	background: linear-gradient(to right,  #02b9e3 1%,#0079c2 100%);
+	color: white;
+	font-size: 0.6em;
+	line-height: 1.3em;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#02b9e3', endColorstr='#0079c2',GradientType=1 );
+}
+
+.listHead{
+	position: absolute;
+	z-index: 11;
+	/* display:none; */
+	height: 20px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	color: white;
+	text-indent: 2em;
+	font-size: 0.7em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+/* ============================================================ area 1 - productos ================= */
+
+#area1{
+	top:10px;
+	right: 10px;
+	bottom: 10px;
+	left:10px;
+	/* background: white url("../img/prodsBg.jpg") no-repeat 0 0; */
+	background-position:center;
+	background-size:auto 100%;
+}
+
+
+#prodServicios{
+	top: 32%;
+	left: 19%;	
+}
+
+#prodProductos{
+	top: 66%;
+	left: 19%;
+}
+.serviciosList{
+	position: absolute;
+	top: 14%;
+	right: 12%;
+	width: 37%;
+	height: 35%;
+}
+.serviciosListHead{
+	position: absolute;
+	position: absolute;
+	top: 12%;
+	right: 12%;
+	z-index: 90;
+	width: 37%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	color: white;
+	text-indent: 2em;
+	font-size: 0.7em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+.serviciosList ul{
+	list-style: circle;
+}
+.serviciosList ul li{
+	
+}
+.serviciosList ul li ul{
+	list-style: disc;
+}
+
+.productosList{
+	position: absolute;
+	top: 54%;
+	right: 12%;
+	padding-top: 2em;
+	width: 37%;
+	height: 35%;
+}
+
+.productosList ul{
+	margin:0;
+	padding: 0 0 0 20px;
+	list-style: none;
+}
+
+.productosColumn1{
+	float:left;
+	overflow: hidden;
+	width:50%;
+}
+.productosColumn2{
+	overflow: hidden;
+	width:50%;
+}
+.transporteListHead,
+.telecomListHead,
+.gobiernoListHead,
+.epcListHead,
+.financierosListHead{
+	position: absolute;
+	top: -10px;
+	width: 50%;
+	height: 20px;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+.telecomListHead{
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 0;
+}
+.gobiernoListHead{
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 0;
+}
+.epcListHead,
+.financierosListHead{
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 0;
+}
+.financierosListHead,
+.epcListHead,
+.gobiernoListHead{
+	position:relative;
+	margin-top: 20px;
+	width: 100%;
+}
+ul.telecomList{
+	margin-bottom: 36px;
+}
+
+/* ============================================================ area 2 - prensa ================= */
+
+#area2{
+	top:10px;
+	right: 10px;
+	bottom: 10px;
+	left:10px;
+	/* background: white url("../img/pressBg.jpg") no-repeat 0 0; */
+	background-position:center;
+	background-size:auto 100%;
+}
+
+#pressPrensa{
+	top: 32%;
+	left: 19%;	
+}
+
+#pressImagen{
+	top: 66%;
+	left: 19%;
+}
+
+.prensaList{
+	position: absolute;
+	top: 14%;
+	right: 12%;
+	padding-top: 2em;
+	width: 37%;
+	height: 22%;
+}
+
+.prensaList ul{
+	margin:0;
+	padding: 0 0 0 20px;
+	height:30%;
+	list-style: none;
+}
+
+
+.prensaRevistaListHead{
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+ .prensaWebListHead{
+	position: relative;
+	width: 100%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+ul.revistaList{
+	margin-bottom: 15px;
+}
+
+ul.webList{
+	margin-top: 5px;
+}
+
+
+
+
+.imagenList{
+	position: absolute;
+	top: 54%;
+	right: 12%;
+	padding-top: 2em;
+	width: 37%;
+	height: 15%;
+}
+
+.imagenListHead{
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 20px;
+	border-bottom-right-radius: 0;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+/* ============================================================ area 4 - home ================= */
+
+#area4{
+	/* background: white url("../img/homeBg.jpg") no-repeat scroll right ; */
+	background-position:right;
+	background-size:auto 100%;
+}
+
+.homeinfo{
+	position: absolute;
+	bottom: 5%;
+	left: 32%;
+	z-index: 10;
+	padding: 5px 10px;
+	padding-top: 15px;
+	width: 64%;
+	height: 40px;
+	border-radius: 5px;
+	background: white;
+	box-shadow: 3px 3px 14px rgba(0,0,0,0.4);
+	color: #777;
+	font-size: 0.7em;
+}
+
+.homeinfoimg{
+	float: left;
+	margin-top: -5px;
+	margin-right: 10px;
+	height: 100%;
+}
+/* ============================================================ area 5 - soluciones ================= */
+
+#area5{
+	/* background: white url("../img/soluBg.jpg") no-repeat 0 0; */
+	background-position:center;
+	background-size:auto 100%;
+}
+
+
+#soluSoluciones{
+	top: 35%;
+	left: 20%;
+}
+
+#soluRfid{
+	top: 12%;
+	left: 40%;
+	padding: 15px 0 0 10px;
+	height: 55px;
+}
+
+#soluAplicaciones{
+	top: 59%;
+	left: 30%;
+	padding: 15px 0 0 10px;
+	height: 55px;
+}
+
+.soluRfidList{
+	position: absolute;
+	top: 16%;
+	right: 10%;
+	padding-top: 2em;
+	width: 35%;
+	height: 44%;
+}
+
+.soluRfidList p{
+	margin:0 15px;
+}
+
+.soluRfidListHead{
+	position: absolute;
+	top: 15%;
+	right: 10%;
+	z-index: 11;
+	width: 35%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+.soluSubHeadBlanco{
+	margin: 10px auto;
+	padding: 15px;
+	border-radius:10px;
+	background: white;
+	color:#0078c2;
+}
+
+.soluAplicacionesList{
+	position: absolute;
+	top: 71%;
+	right: 10%;
+	padding-top: 2em;
+	width: 60%;
+	height: 22%;
+}
+
+.soluAplicacionesList p{
+	margin: 0 15px;
+}
+
+.soluAplicacionesListHead{
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+.soluAplicacionesList ul{
+	
+}
+
+.soluAplicacionesList ul li{
+	
+}
+
+/* ============================================================ area 7 - ublue fases ================= */
+
+#area7{
+	top:0px;
+	right:10px;
+	bottom:10px;
+	left:10px;
+	background: white url("../img/ublueBg.jpg") no-repeat 0 0;
+	background-position: 100% auto;
+	background-size:cover;
+}
+
+
+
+#ublueUblue{
+	top: 15%;
+	left: 15%;
+}
+
+#ublueFase1{
+	top: 25%;
+	left: 30%;
+	padding: 15px 0 0 10px;
+	height: 55px;
+}
+
+#ublueFase2{
+	top: 69%;
+	left: 20%;
+	padding: 15px 0 0 10px;
+	height: 55px;
+}
+
+.backendList{
+	position: absolute;
+	top: 16%;
+	right: 25%;
+	padding-top: 2em;
+	width: 28%;
+	height: 20%;
+}
+
+.backendList ul{
+	margin:0 25px;
+	padding-right: 30px;
+}
+
+.backendListHead{
+	position: absolute;
+	top: 15%;
+	right: 25%;
+	width: 28%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+.ublueSubHeadBlanco{
+	margin: 10px auto;
+	padding: 15px;
+	border-radius:10px;
+	background: white;
+	color:#0078c2;
+}
+
+.fabricacionList{
+	position: absolute;
+	top: 56%;
+	right: 15%;
+	padding-top: 2em;
+	width: 39%;
+	height: 34%;
+}
+
+.fabricacionList p{
+	margin:0 10px;
+	padding-right:15px;
+}
+
+.fabricacionList ul{
+	margin:0 40px;
+	padding-top:10px;
+	padding-right: 40px;
+}
+
+.fabricacionListHead{
+	position: absolute;
+	top: 55%;
+	right: 15%;
+	width: 39%;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+.ublueSubHeadBlanco{
+	margin: 10px auto;
+	padding: 15px;
+	border-radius:10px;
+	background: white;
+	color:#0078c2;
+}
+
+/* ============================================================ area 8 - planta ================= */
+
+#area8{
+	top:10px;
+	right: 10px;
+	bottom: 10px;
+	left:10px;
+	/* background: white url("../img/plantaBg.jpg") no-repeat 0 0; */
+	background-position:center;
+	background-size:auto 100%;
+}
+
+#plantaPlanta{
+	top: 40%;
+	left: 19%;	
+}
+
+.plantaList{
+	position: absolute;
+	top: 14%;
+	right: 12%;
+	width: 37%;
+	height: 32%;
+}
+.plantaListHead{
+	position: absolute;
+	top: 12%;
+	right: 12%;
+	z-index: 11;
+	width: 37%;
+	height: 20px;
+	height: 20px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 10px;
+	background: #0283c5;
+	background: -webkit-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: -ms-linear-gradient(left,  #0283c5 1%,#00398e 100%);
+	background: linear-gradient(to right,  #0283c5 1%,#00398e 100%);
+	text-indent: 2em;
+	line-height: 20px;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0283c5', endColorstr='#00398e',GradientType=1 );
+}
+
+.plantaList p{
+	margin:10px 15px;
+}
+
+.graficoList{
+	position: absolute;
+	top: 63%;
+	left: 20%;
+	z-index:9;
+	width: 80%;
+	height: 32%;
+}
+
+.graficoimg {
+	float:left;
+	}
+
+.graficotxt {
+	float:left;
+	color:#000;
+    font-size: 0.5em;
+	}
+
+
+
+/* =========================================================================== Media queries =================== */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+	#navProductos {top: 110px;right: 280px;}
+	#navSoluciones {top: 190px;right: 25px;}
+	#navUnitecblue {top: 540px;right: 200px;}
+	#navQuienes {top: 420px;right: 400px;}
+	#navOculto {top: 320px;right: 350px;}
+	.serviciosList, .productosList,.serviciosListHead {right: 2%;width: 50%;}
+	#soluSoluciones {left: 4%;}
+	#soluRfid {left: 25%;}
+	#soluAplicaciones {top: 56%;left: 17%;}
+	.soluRfidList {right: 3%;width: 52%;}
+	.soluAplicacionesList {top: 73%;right: 3%;width: 72%;height: 22%;}
+	#ublueUblue {left: 6%;}
+	.backendList {right: 2%;width: 41%;height: 23%;}
+	.fabricacionList {right: 2%;width: 53%;height: 40%;}
+	.plantaList {right: 3%;width: 48%;height: 33%;}
+	.graficoList {left: 27%;width: 75%;}
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+}
+
+@media only screen and (max-width : 1024px) {
+	#navQuienes{top: 390px;}
+	#navUnitecblue {top: 480px;}
+	.homeinfo{bottom: 1%;left: 20%;}
+	.serviciosList {right: 5%;width: 44%;}
+	.serviciosListHead {right: 5%;width: 44%;}
+	.productosList{right: 5%;width: 44%;}
+	.soluRfidListHead {right: 1%;width: 42%;}
+	.soluRfidList {right: 1%;width: 42%;height: 53%;}
+	.soluAplicacionesList {top: 76%;right: 5%;width: 67%;}
+	.backendListHead {right: 10%;width: 34%;}
+	.backendList {right: 10%;width: 34%;height: 24%;}
+	.fabricacionListHead {top: 51%;right: 5%;width: 50%;}
+	.fabricacionList {top: 52%;right: 5%;width: 50%;height: 42%;}
+	.plantaListHead {right: 2%;width: 49%;}
+	.plantaList {right: 2%;width: 49%;height: 33%;}
+
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/* ===========================================================================Media queries =================== */
+
